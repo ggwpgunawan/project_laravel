@@ -9,7 +9,6 @@
         <label>Kategori layanan</label>
         <select id="kategorilayanan" name="kategorilayanan_id" class="form-control js-example-basic-single">
             <option value="0" disable="true" selected="true">Please Select</option>
-            id
             @foreach ($kategori as $key => $value)
             <option value="{{ $value->id }}">{{ $value->kategori }}</option>    
             @endforeach
