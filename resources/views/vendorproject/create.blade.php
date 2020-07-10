@@ -9,8 +9,9 @@
         <label>Kategori layanan</label>
         <select id="kategorilayanan" name="kategorilayanan_id" class="form-control js-example-basic-single">
             <option value="0" disable="true" selected="true">Please Select</option>
-            @foreach ($kategori as $kategori_id => $kategori_name)
-            <option value="{{ $kategori_id }}">{{ $kategori_name }}</option>    
+            id
+            @foreach ($kategori as $key => $value)
+            <option value="{{ $value->id }}">{{ $value->kategori }}</option>    
             @endforeach
         </select>
       </div>
@@ -18,8 +19,8 @@
         <label>Nama layanan</label>
         <select id="layanan" name="layanan_id" class="form-control js-example-basic-single">
             <option value="0" disable="true" selected="true">Please Select</option>
-            {{--@foreach ($layanan as $layanan_id => $layanan_name)
-            <option value="{{ $layanan_id }}">{{ $layanan_name }}</option>    
+            {{--@foreach ($layanan as $arr => $item)
+            <option value="{{ $item->id }}">{{ $item->nama_layanan }}</option>    
             @endforeach--}}
         </select>
       </div>
